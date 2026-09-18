@@ -7,12 +7,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-**/node_modules
-
 node_modules
 dist
 dist-ssr
 *.local
+
+**/node_modules
+!game-1-phaser/dist/
+!game-2-pixi/dist/
+!game-3-threejs/dist/
 
 # Editor directories and files
 .vscode/*
