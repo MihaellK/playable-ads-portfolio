@@ -10,70 +10,84 @@
     <div class="container">
         <header>
             <h1>Playable Ads Technical Portfolio</h1>
-            <p class="subtitle">High-conversion micro-experiences built with WebGL, Canvas, and strict performance constraints.</p>
+            <p class="subtitle">Playable micro-experiences built with Three.js, Pixi.js and Phaser with strict performance constraints.</p>
         </header>
 
         <section class="portfolio-grid">
             <a href="./game-1-phaser/dist/index.html" class="card play-btn" 
-               data-title="Game 1: 2D Phaser Match" 
+               data-title="2D Phaser Drift Tap" 
                data-tech="Phaser 3 | TypeScript | Vite"
                data-time="⏱️ 1h Sprint"
-               data-desc="Focado em 'Game Juice' e física leve. Apresenta um onboarding claro (regra dos 3 segundos) e mecânicas de toque rápido otimizadas para conversão.">
+               data-desc="
+               Performance Focus: Procedural graphics packed into a single HTML build, ensuring instant loading and mitigation of CORS errors.
+Scalable Architecture: A config-driven system (gameConfig.ts) that allows dynamic adjustments to game balance and CTAs without code recompilation.
+Retention & Juice: The '3-Second Rule' is enforced via timeScale manipulation, complemented by immediate tactile feedback featuring elastic transitions and particle systems.
+
+               ">
                 <div class="card-content">
-                    <h2>Game 1: 2D Phaser Match</h2>
-                    <p>Juicy physics-lite interactions with modular configurations.</p>
+                    <h2>2D Phaser Drift Tap</h2>
+                    <p>Micro-racer playble Ad. Built with Phaser 3, with custom physics and slow-motion onboarding. Bundled into a single HTML file. </p>
                 </div>
             </a>
             
             <a href="./game-2-pixi/dist/index.html" class="card play-btn"
-               data-title="Game 2: PixiJS UI Flow"
+               data-title="PixiJS Nitro Swipe'"
                data-tech="PixiJS | GSAP | TypeScript"
                data-time="⏱️ 1h Sprint"
-               data-desc="Demonstração de arquitetura orientada a eventos e layout responsivo. Transições fluidas e estado de jogo modular.">
+               data-desc="Reusable Systems (A/B Testing): Data-driven architecture (gameConfig.ts). The game reads parameters directly from the URL to instantly switch colors and mechanical friction without requiring recompilation.
+                Asset Optimization: Particles and elastic transitions generated 100% via code. The compilation unifies scripts and graphics into a single HTML file (vite-plugin-singlefile), ensuring immediate loading inside advertising iFrames.
+                ">
                 <div class="card-content">
-                    <h2>Game 2: PixiJS UI Flow</h2>
-                    <p>Snappy transitions, responsive layout, and event-driven ad architecture.</p>
+                    <h2>PixiJS Nitro Swipe</h2>
+                    <p>Playable ad with tactile swipe mechanics. Features dynamic A/B testing via URL parameters, and procedural game juice contained within a single HTML file. </p>
                 </div>
             </a>
             
             <a href="./game-3-threejs/dist/index.html" class="card play-btn"
-               data-title="Game 3: Tiny Wheels 3D Runner"
+               data-title="Three.js 3D Runner"
                data-tech="Three.js | Vanilla TS | Custom Loop"
-               data-time="⏱️ 1h30m Sprint"
-               data-desc="Micro-experiência 3D com ilusão de velocidade. Loop de deltaTime customizado (sem dependências externas) e inputs híbridos touch/mouse.">
+               data-time="⏱️ 1h Sprint"
+               data-desc="Performance: Built with Three.js without heavy abstractions, guaranteeing low memory consumption and total control over draw calls.
+Illusion of Movement: Utilizes a custom time manager and texture offset displacement to simulate high speed within a restricted environment.
+Optimized Packaging: Unified production build via Vite (vite-plugin-singlefile), generating a single lightweight document ready for integration with MRAID standards.
+">
                 <div class="card-content">
-                    <h2>Game 3: Tiny Wheels 3D Runner</h2>
-                    <p>Three.js illusion of speed, touch-first inputs, and custom delta-time loop.</p>
+                    <h2>Three.js 3D Runner</h2>
+                    <p>Pure Three.js micro-experience. Features speed illusions, compiled into a single HTML file tailored for mobile performance.</p>
                 </div>
             </a>
+        </section>
+
+        <section class="ai-workflow-section">
+            <h2>AI Workflow Integration</h2>
+            <div class="ai-content">
+              <p>
+                  I structured my workflow by integrating LLMs as true Tech Leads and software architects. I configured custom AIs with strict engineering guidelines, acting as a scale multiplier that allows me to exercise <strong>strong ownership</strong> and operate projects independently with the speed and technical rigor of an entire team.
+              </p>
+              <p>
+                  The efficiency of this methodology is proven in both rapid prototyping and extreme-pressure deliveries. An empirical case was the construction of this very portfolio: in a sprint of just 4 hours, I structured, developed, and packaged three distinct playable ads (simple, yet containing the complete funnel and pillars of a playable ad) using <strong>Phaser 3, PixiJS, and Three.js</strong>. I delegated to the AI the generation of boilerplates, the Vite configuration for single-file HTML packaging (<strong>MRAID standards</strong>), and the assembly of data-driven architectures (like <code>gameConfig.ts</code>), which easily allows for A/B testing without code duplication. By automating this initial load, I could dedicate my critical judgment and engineering time exclusively to polishing the <em>game juice</em>, optimizing retention in the first 3 seconds, and ensuring that themes and mechanics could be adapted efficiently without breaking the game code.
+              </p>
+              <p>
+                  Furthermore, during the management of my indie studio, I sustained the solo development of a project that secured a <strong>R$ 50,000 investment from Sampa Games</strong> and the delivery of a stable build for exhibition at <strong>Gamescom Latam</strong>. In these intense cycles, I instruct the AI with guardrails focused on mobile and browser constraints: it acts as a real-time defensive code auditor, early diagnosing memory leaks, Garbage Collection spikes, and unnecessary allocations within physics and rendering loops. Additionally, I integrate generative tools to create and adapt basic visual effects, shortening the asset pipeline.
+              </p>
+              <p>
+                  For me, AI-first development does not replace critical game design or manual optimization. On the contrary, it absorbs the grunt work and ensures code stability, giving me the autonomy to take an advertising brief and turn it into an interactive, responsive, and polished experience. This is how I balance technical quality, execution speed, and scope control.
+              </p>
+                </div>
         </section>
 
         <section class="about-section">
             <h2>About the Engineer</h2>
             <div class="about-content">
                 <p>
-                    Sou Engenheiro de Computação e fundador da Non Zero Studios. Após liderar ciclos completos de desenvolvimento em projetos independentes como o <strong>Tiny Wheels</strong> e gerenciar equipes multidisciplinares (programação, arte 3D e design), meu foco técnico atual é a engenharia de <em>Playable Ads</em>.
+                  Computer Engineer and Game Developer specializing in interactive web experiences, rapid prototyping, and AI-accelerated workflows. Proven track record of independently driving projects from concept to production-ready builds, blending strong <strong>JavaScript/TypeScript</strong> fundamentals with <strong>game design</strong> and interactive mechanics. Highly experienced in utilizing AI coding agents to accelerate development cycles and optimize code. 
                 </p>
                 <p>
-                    Combino arquitetura orientada a dados, tecnologias web nativas (Three.js, PixiJS, Phaser) e otimização severa de performance para entregar sistemas de jogos reutilizáveis. O objetivo é sempre o mesmo: engajamento tátil imediato, validação rápida de mercado e alta conversão sem sacrificar a estabilidade em dispositivos mobile.
+                  Thrives in fast-paced, early-stage environments, consistently balancing quality, scope, and rapid execution to deliver polished, engaging, and <em>highly responsive</em> user experiences. Fluent in English and comfortable collaborating directly with stakeholders and cross-functional teams.
                 </p>
             </div>
         </section>
 
-        <section class="ai-workflow-section">
-            <h2>AI Workflow Integration</h2>
-            <div class="ai-content">
-                    <p>
-                        Como Engenheiro de Computação e líder de desenvolvimento, integro ferramentas de Inteligência Artificial não para terceirizar a lógica, mas como um <strong>co-piloto de aceleração técnica e criativa</strong>.
-                    </p>
-                    <p>
-                        No ciclo de vida de projetos independentes complexos — lidando com física customizada ou sistemas de navegação de veículos estruturados em GOAP — utilizo LLMs para gerar <em>boilerplates</em> arquiteturais, manipular expressões regulares pesadas e estruturar rascunhos de algoritmos iterativos. Isso permite que eu invista meu tempo de engenharia exclusivamente na revisão crítica, no <em>debugging</em> e na integração das mecânicas.
-                    </p>
-                    <p>
-                        Na produção criativa, adoto IA gerativa para conceber <em>placeholders</em> rápidos, validar paletas estilizadas e testar <em>moodboards</em> estruturais antes de definir o escopo e orçar *milestones* com freelancers especializados. Para o ecossistema de <em>Playable Ads</em>, esse fluxo converte-se em iterações diárias de alta velocidade, permitindo testes A/B mecânicos rigorosos sem comprometer a otimização severa de memória e <em>draw calls</em> exigidas para navegadores mobile.
-                    </p>
-                </div>
-        </section>
     </div>
 
     <!-- O Modal de Gameplay -->
