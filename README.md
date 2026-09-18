@@ -2,7 +2,7 @@
 
 A collection of 3 production-ready HTML5 playable ads engineered within a strict 20-hour sprint. Designed for instant loading, mobile touch optimization, and high-conversion marketing funnels.
 
-🎮 **[Live Hub Demo - Play the Ads Here](https://SEU_USUARIO.github.io/playable-ads-portfolio/)**
+🎮 **[Live Hub Demo - Play the Ads Here](https://mihaellk.github.io/playable-ads-portfolio/)**
 
 ## 🏗️ Technical Architecture & Constraints Met
 This repository demonstrates core competencies in ad-tech game development:
@@ -29,7 +29,7 @@ This repository demonstrates core competencies in ad-tech game development:
 ## 🚀 Local Deployment
 To run the hub and compile the games locally:
 ```bash
-git clone [https://github.com/SEU_USUARIO/playable-ads-portfolio.git](https://github.com/SEU_USUARIO/playable-ads-portfolio.git)
+git clone [https://github.com/mihaellk/playable-ads-portfolio.git](https://github.com/mihaellk/playable-ads-portfolio.git)
 cd playable-ads-portfolio
 npm install
 npm run dev
