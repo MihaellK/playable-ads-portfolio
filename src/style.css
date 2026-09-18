@@ -213,15 +213,31 @@ section h2 {
 
 .game-details h2 { border-bottom: none; margin-bottom: 0.5rem; color: #fff; }
 
+.badge-container {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
 .tech-stack {
     display: inline-block;
-    background: #2a2a35;
-    color: var(--accent);
-    padding: 0.3rem 0.8rem;
+    background: #23232d; /* Fundo escuro sutil como na referência */
+    color: var(--accent); /* O tom rosa/vermelho */
+    padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: bold;
-    margin-bottom: 1.5rem;
+}
+
+.time-badge {
+    display: inline-block;
+    background: #23232d;
+    color: #00ffcc; /* Um ciano contrastante para destacar o tempo curto */
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
 }
 
 .interview-note {

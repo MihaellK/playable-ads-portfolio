@@ -17,6 +17,7 @@
             <a href="./game-1-phaser/dist/index.html" class="card play-btn" 
                data-title="Game 1: 2D Phaser Match" 
                data-tech="Phaser 3 | TypeScript | Vite"
+               data-time="⏱️ 1h Sprint"
                data-desc="Focado em 'Game Juice' e física leve. Apresenta um onboarding claro (regra dos 3 segundos) e mecânicas de toque rápido otimizadas para conversão.">
                 <div class="card-content">
                     <h2>Game 1: 2D Phaser Match</h2>
@@ -27,6 +28,7 @@
             <a href="./game-2-pixi/dist/index.html" class="card play-btn"
                data-title="Game 2: PixiJS UI Flow"
                data-tech="PixiJS | GSAP | TypeScript"
+               data-time="⏱️ 1h Sprint"
                data-desc="Demonstração de arquitetura orientada a eventos e layout responsivo. Transições fluidas e estado de jogo modular.">
                 <div class="card-content">
                     <h2>Game 2: PixiJS UI Flow</h2>
@@ -37,6 +39,7 @@
             <a href="./game-3-threejs/dist/index.html" class="card play-btn"
                data-title="Game 3: Tiny Wheels 3D Runner"
                data-tech="Three.js | Vanilla TS | Custom Loop"
+               data-time="⏱️ 1h30m Sprint"
                data-desc="Micro-experiência 3D com ilusão de velocidade. Loop de deltaTime customizado (sem dependências externas) e inputs híbridos touch/mouse.">
                 <div class="card-content">
                     <h2>Game 3: Tiny Wheels 3D Runner</h2>
@@ -60,9 +63,16 @@
         <section class="ai-workflow-section">
             <h2>AI Workflow Integration</h2>
             <div class="ai-content">
-                <!-- Espaço reservado para a resposta sobre integração de IA -->
-                <p><em>[Aguardando conteúdo sobre o workflow de Inteligência Artificial...]</em></p>
-            </div>
+                    <p>
+                        Como Engenheiro de Computação e líder de desenvolvimento, integro ferramentas de Inteligência Artificial não para terceirizar a lógica, mas como um <strong>co-piloto de aceleração técnica e criativa</strong>.
+                    </p>
+                    <p>
+                        No ciclo de vida de projetos independentes complexos — lidando com física customizada ou sistemas de navegação de veículos estruturados em GOAP — utilizo LLMs para gerar <em>boilerplates</em> arquiteturais, manipular expressões regulares pesadas e estruturar rascunhos de algoritmos iterativos. Isso permite que eu invista meu tempo de engenharia exclusivamente na revisão crítica, no <em>debugging</em> e na integração das mecânicas.
+                    </p>
+                    <p>
+                        Na produção criativa, adoto IA gerativa para conceber <em>placeholders</em> rápidos, validar paletas estilizadas e testar <em>moodboards</em> estruturais antes de definir o escopo e orçar *milestones* com freelancers especializados. Para o ecossistema de <em>Playable Ads</em>, esse fluxo converte-se em iterações diárias de alta velocidade, permitindo testes A/B mecânicos rigorosos sem comprometer a otimização severa de memória e <em>draw calls</em> exigidas para navegadores mobile.
+                    </p>
+                </div>
         </section>
     </div>
 
@@ -81,7 +91,10 @@
                 <!-- Lado Direito: A Descrição -->
                 <div class="game-details">
                     <h2 id="modal-title">Title</h2>
-                    <div class="tech-stack" id="modal-tech">Tech Stack</div>
+                    <div class="badge-container">
+                      <div class="tech-stack" id="modal-tech">Tech Stack</div>
+                      <div class="time-badge" id="modal-time">⏱️ Time</div>
+                    </div>
                     <p id="modal-desc">Description goes here.</p>
                     
                     <div class="interview-note">
@@ -107,6 +120,7 @@
             // Popula os dados
             document.getElementById('modal-title').textContent = card.dataset.title;
             document.getElementById('modal-tech').textContent = card.dataset.tech;
+            document.getElementById('modal-time').textContent = card.dataset.time;
             document.getElementById('modal-desc').textContent = card.dataset.desc;
             
             // Carrega o jogo no iframe
