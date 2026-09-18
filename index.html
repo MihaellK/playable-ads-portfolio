@@ -14,21 +14,30 @@ REPO HUB<!DOCTYPE html>
         </header>
 
         <section class="portfolio-grid">
-            <a href="./game-1-phaser/dist/index.html" class="card">
+            <a href="./game-1-phaser/dist/index.html" class="card play-btn" 
+               data-title="Game 1: 2D Phaser Match" 
+               data-tech="Phaser 3 | TypeScript | Vite"
+               data-desc="Focado em 'Game Juice' e física leve. Apresenta um onboarding claro (regra dos 3 segundos) e mecânicas de toque rápido otimizadas para conversão.">
                 <div class="card-content">
                     <h2>Game 1: 2D Phaser Match</h2>
-                    <p>Juicy physics-lite interactions with modular configurations and clear onboarding.</p>
+                    <p>Juicy physics-lite interactions with modular configurations.</p>
                 </div>
             </a>
             
-            <a href="./game-2-pixi/dist/index.html" class="card">
+            <a href="./game-2-pixi/dist/index.html" class="card play-btn"
+               data-title="Game 2: PixiJS UI Flow"
+               data-tech="PixiJS | GSAP | TypeScript"
+               data-desc="Demonstração de arquitetura orientada a eventos e layout responsivo. Transições fluidas e estado de jogo modular.">
                 <div class="card-content">
                     <h2>Game 2: PixiJS UI Flow</h2>
                     <p>Snappy transitions, responsive layout, and event-driven ad architecture.</p>
                 </div>
             </a>
             
-            <a href="./game-3-threejs/dist/index.html" class="card">
+            <a href="./game-3-threejs/dist/index.html" class="card play-btn"
+               data-title="Game 3: Tiny Wheels 3D Runner"
+               data-tech="Three.js | Vanilla TS | Custom Loop"
+               data-desc="Micro-experiência 3D com ilusão de velocidade. Loop de deltaTime customizado (sem dependências externas) e inputs híbridos touch/mouse.">
                 <div class="card-content">
                     <h2>Game 3: Tiny Wheels 3D Runner</h2>
                     <p>Three.js illusion of speed, touch-first inputs, and custom delta-time loop.</p>
@@ -56,5 +65,32 @@ REPO HUB<!DOCTYPE html>
             </div>
         </section>
     </div>
+
+    <!-- O Modal de Gameplay -->
+    <div id="game-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            
+            <div class="modal-layout">
+                <!-- Lado Esquerdo: O Celular -->
+                <div class="device-mockup">
+                    <iframe id="game-iframe" src="" frameborder="0" scrolling="no"></iframe>
+                </div>
+                
+                <!-- Lado Direito: A Descrição -->
+                <div class="game-details">
+                    <h2 id="modal-title">Title</h2>
+                    <div class="tech-stack" id="modal-tech">Tech Stack</div>
+                    <p id="modal-desc">Description goes here.</p>
+                    
+                    <div class="interview-note">
+                        <strong>Tech Note:</strong> Running inside an iframe to simulate standard MRAID/Webview isolated ad environments.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
