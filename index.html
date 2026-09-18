@@ -1,4 +1,4 @@
-REPO HUB<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -91,6 +91,42 @@ REPO HUB<!DOCTYPE html>
             </div>
         </div>
     </div>
+
+    <!-- Script de Interação do Modal -->
+    <script>
+        const cards = document.querySelectorAll('.play-btn');
+        const modal = document.getElementById('game-modal');
+        const iframe = document.getElementById('game-iframe');
+        const closeBtn = document.querySelector('.close-modal');
+        const overlay = document.querySelector('.modal-overlay');
+
+        function openModal(e) {
+            e.preventDefault(); // Impede de sair da página
+            const card = e.currentTarget;
+            
+            // Popula os dados
+            document.getElementById('modal-title').textContent = card.dataset.title;
+            document.getElementById('modal-tech').textContent = card.dataset.tech;
+            document.getElementById('modal-desc').textContent = card.dataset.desc;
+            
+            // Carrega o jogo no iframe
+            iframe.src = card.getAttribute('href');
+            
+            // Mostra o modal
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Trava o scroll do fundo
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            iframe.src = ""; // Mata o iframe para parar o som/processamento do jogo
+            document.body.style.overflow = ''; 
+        }
+
+        cards.forEach(card => card.addEventListener('click', openModal));
+        closeBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+    </script>
 
 </body>
 </html>
