@@ -155,16 +155,31 @@ section h2 {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
+/* touch target isolado */
 .close-modal {
     position: absolute;
-    top: 1rem; right: 1.5rem;
-    background: none; border: none;
+    top: 1rem; 
+    right: 1.5rem;
+    background: var(--card-bg); /* Fundo sólido para evitar conflito visual */
+    border: 1px solid #2a2a35;
+    border-radius: 50%; /* Circular para melhor UX em mobile */
+    width: 40px; 
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--text-muted);
-    font-size: 2rem; cursor: pointer;
-    transition: color 0.2s;
+    font-size: 1.5rem; 
+    cursor: pointer;
+    z-index: 1002; /* Garante que fique estritamente acima do iframe e do mockup */
+    transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-.close-modal:hover { color: var(--accent); }
+.close-modal:hover { 
+    color: var(--accent); 
+    border-color: var(--accent);
+}
 
 .modal-layout {
     display: flex;
@@ -218,7 +233,7 @@ section h2 {
     color: #d1d5db;
 }
 
-/* Responsividade do Modal para telas menores */
+/* Atualize a responsividade do Modal para telas menores */
 @media (max-width: 768px) {
     .modal-layout {
         flex-direction: column;
@@ -227,6 +242,14 @@ section h2 {
         width: 100%;
         max-width: 320px;
         height: 500px;
+        margin-top: 1.5rem; /* Empurra o celular para baixo, liberando o topo */
     }
-    .modal-content { padding: 1.5rem 1rem; }
+    .modal-content { 
+        /* Aumenta significativamente o padding superior para abrigar o botão isoladamente */
+        padding: 3rem 1rem 1.5rem 1rem; 
+    }
+    .close-modal {
+        top: 0.75rem;
+        right: 0.75rem;
+    }
 }
